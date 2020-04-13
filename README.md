@@ -14,11 +14,32 @@ cargo atcoder submit <problem-id>
 cargo atcoder submit --bin <problem-id>
 ```
 
+### 便利なやつ
+
+```bash
+alias cas="cargo atcoder submit --bin"
+```
+
+これで例えばabc152ディレクトリに移動して
+
+```bash
+cas a
+```
+と打てば提出できる
+
 
 ## 提出状況確認
 
-```
+```bash
 cargo atcoder status
+```
+
+
+## 便利alias群
+
+```bash
+alias cas="cargo atcoder submit"
+alias prepare="cargo atcoder new"
 ```
 
 

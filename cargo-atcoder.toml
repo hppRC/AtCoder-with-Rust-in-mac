@@ -1,9 +1,11 @@
 [atcoder]
-submit_via_binary = false # submit via binary by default
+submit_via_binary = true  # submit via binary by default
 use_cross = true          # use `cross` instead of `cargo` when generating binaries
 binary_column = 80        # maximum column number of generated binary (0 for no wrapping)
 update_interval = 1000    # interval time of fetching result (ms)
-strip_path = "strip"      # specify `strip` command path. NOTE: if you use macOS, you have to install GNU strip and specify its path here.
+# specify `strip` command path. NOTE: if you use macOS, you have to install GNU strip and specify its path here.
+strip_path = "/usr/local/opt/binutils/bin/strip"
+
 
 [profile]
 # target to use to generate binary
