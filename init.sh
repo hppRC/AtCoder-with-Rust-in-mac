@@ -25,7 +25,7 @@ cargo atcoder login
 # for cross compile
 rustup target add x86_64-unknown-linux-musl
 
-if [ $(which docker) ]; then
+if [ ! $(which docker) ]; then
     echo '''
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 ⚠️⚠️⚠️ dockerがインストールされていないようです。 ⚠️⚠️⚠️
