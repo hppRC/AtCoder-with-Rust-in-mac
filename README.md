@@ -6,6 +6,7 @@
 
 まずこのリポジトリをcloneします。
 AtCoder用の環境を作りたい場所で、以下のコマンドを実行してください。
+わかる方はこのリポジトリを`use template`(緑色のボタンのやつ)して頂いても大丈夫です。
 
 ```bash
 git clone https://github.com/hppRC/AtCoder-with-Rust-in-mac.git
