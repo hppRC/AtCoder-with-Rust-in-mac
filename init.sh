@@ -15,4 +15,23 @@ if [ ! $(which cargo-atcoder) ]; then
     cargo install --git https://github.com/tanakh/cargo-atcoder.git
 fi
 
+if [ ! $(which cross) ]; then
+    cargo install cross
+fi
+
 cargo atcoder login
+
+# for cross compile
+rustup target add x86_64-unknown-linux-musl
+
+if [ $(which docker) ]; then
+    echo '''
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+⚠️⚠️⚠️ dockerがインストールされていないようです。 ⚠️⚠️⚠️
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+
+DockerHubでアカウントを作成して、dockerのインストールをしてください。
+なんかスパムっぽい文言ですがスパムではありません。
+macの場合、Dockerがないとうまく提出できないと思います。
+    '''
+fi

@@ -30,6 +30,19 @@ bash ./init.sh
 
 インストールが終わると**login**を求められるので、AtCoderのユーザー名とパスワードを入力ください。
 
+
+### Dockerをインストールしていない方へ
+
+クロスコンパイル(コンパイルされる環境と実行環境が違う時にいい感じにコンパイル)するために、crossというツールを使用します。これはDockerを使用するので、Dockerをinstallする必要があります。
+
+こちらの記事\[[DockerをMacにインストールする（更新: 2019/7/13）](https://qiita.com/kurkuru/items/127fa99ef5b2f0288b81)\]に詳しく載っていますが、一応手順をさらっと書いておきます。
+
+Dockerのインストールはやり方を知っていると簡単です。まず[Docker公式サイト](https://hub.docker.com/editions/community/docker-ce-desktop-mac)にアクセスして`create account`してください。Dockerを使うためには~~なぜか~~DockerHubというところのアカウントを作る必要があるので、ここは我慢してください。
+
+適当にインストール手順が出てくると思うので、いい感じにこなすとコマンドラインでdockerが呼べるようになっています。`docker version`を実行してみましょう。
+
+### 長い戦いの果てに
+
 さて、これで環境は整ったはずです。
 早速問題を解いて提出してみましょう！
 
@@ -59,15 +72,17 @@ bash ./init.sh
 - [AtCoder に登録したら解くべき精選過去問 10 問を Rust で解いてみた](https://qiita.com/tubo28/items/e6076e9040da57368845)
 - [Rustで楽しむ競技プログラミング](https://www.slideshare.net/YusukeYoshimoto2/rust-137863085)
 
-### 解法を投げる(デフォルトはこっちにしてあります)
+### 解法を投げる
 
 ```bash
 cargo atcoder submit <problem-id>
 ```
 
-### バイナリで投げる
+### バイナリで投げる(デフォルトはこっちにしてあります)
 
 手元でコンパイル済みのものを提出として投げるので、自作のcrate(ライブラリ)を使えるようになったり、世の中の便利crateを引っ張ってきて使わせてもらうこともできます。
+proconioというcrateは言語アップデート後のジャッジでしか対応していないはずなので、とりあえずバイナリを投げておくのが安全策ではあります。(どんな問題にも使えるので)
+
 
 ```bash
 cargo atcoder submit --bin <problem-id>
