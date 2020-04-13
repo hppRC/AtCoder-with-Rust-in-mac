@@ -16,6 +16,7 @@ if [ ! $(which cargo-atcoder) ]; then
 fi
 
 if [ ! $(which cross) ]; then
+    # ⚠️　これないとうまく動かないです、注意！
     cargo install cross
 fi
 
